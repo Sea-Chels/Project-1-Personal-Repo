@@ -4,9 +4,19 @@ var fridge = document.getElementById('fridge');
 var queryList = [];
 var recipeBook = document.getElementById('card-container');
 var cardModal = document.getElementById('modalBox');
+   
+//__________Chelby's Javascript for "lets get started button_________
 
 
+var getStartedBtn = document.getElementById('getStarted');
+var formContainer = document.getElementById('show-form');
 
+getStartedBtn.addEventListener('click', function(){
+    getStartedBtn.classList.add('hide');
+    formContainer.classList.remove('hide');
+})
+
+//___________________________________________________________________________
 
 //function to add data to fridge list as well as the queryList, then submits request.  to do: populate recipe cards with results
     
@@ -19,7 +29,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
         ingredient.id = food.value;
         fridge.append(ingredient);
         var removeButton = document.createElement('button');
-        removeButton.innerHTML = 'x';
+        removeButton.innerHTML = '✖';
         removeButton.classList.add('remove-Btn')
         removeButton.addEventListener('click', function(event){
             event.preventDefault();

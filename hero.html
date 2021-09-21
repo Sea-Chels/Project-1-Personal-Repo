@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./GETUIKIT/uikit-3.7.3/css/uikit.min.css"/>
-    <script src="./GETUIKIT/uikit-3.7.3/js/uikit.min.js"></script>
-    <script src="./GETUIKIT/uikit-3.7.3/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="./css/uikit.min.css"/>
+    <script src="./js/uikit.min.js"></script>
+    <script src="./js/uikit-icons.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Tu Le Creés</title>
 </head>
@@ -57,11 +57,11 @@
          </div>
         </header>
      <section class="hero hero-image ">
-         <button class="uk-button uk-button-secondary uk-button-large get-started-btn hero-text hide">Let's Get Started!
+         <button class="uk-button uk-button-secondary uk-button-large get-started-btn hero-text" id="getStarted">Let's Get Started!
          </button>
 
          <!-- this is the form with the class hide that shows when you press the button above-->
-         <div class="form-container container ">
+         <div class="form-container container hide" id="show-form">
              <form id="form">
                 <div id="form-div">
                     <label>List any ingredients you have here with commas in between (Proteins, vegetables, fruits):</label>
@@ -69,9 +69,9 @@
                     <br>
                     <input type="text" placeholder="Ingredients" id="food">
                     <ul id="fridge"> 
-                        <li class="ingredient">Example Ingredient 1</li>
+                        <!-- <li class="ingredient">Example Ingredient 1</li>
                         <li class="ingredient">Example Ingredient 2</li>
-                        <li class="ingredient">Example Ingredient 3</li>
+                        <li class="ingredient">Example Ingredient 3</li> -->
                     </ul> 
                 </div>
             </form>
@@ -80,7 +80,7 @@
         
         <!-- this div contains all of the cards -->
         <div id="card-container">
-           <!--<section class="card">
+           <section class="card">
                 <header>Pumpkin Soup</header>
                 <img class="card-img" src="./images/Fall-Recipe-1-img.png" alt="recipe-1" />
             </section>
@@ -96,7 +96,7 @@
             <section class="card">
                 <header>Salsa</header>
                 <img src="./images/ingredients-2.jpeg" alt="recipe-1" />
-            </section>-->
+            </section>
         </div>
         <h3 id="explore" >Explore More!</h3>
         <hr>
@@ -131,7 +131,7 @@
     <br>
     <br>
     <footer id="copyright">
-        copyright group 7
+        copyright group 7 <a href="" uk-totop></a>
     </footer>
     <script rel="javascript" src="script.js"></script>
     <script src="./js/search_recipes.js"></script>

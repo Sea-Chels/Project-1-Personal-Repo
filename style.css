@@ -149,12 +149,31 @@ transform: translate(-50px,0px);
 li{
     list-style-type: none;
 }
-#form-div li::after{
-    content: "✖";
+/*-----------------remove button styling-------------------*/
+.remove-Btn{
+    text-decoration:none;
     font-size: 1.15em;
     color: var(--main-color);
     padding-left:10px;
 }
+button {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    background: #222;
+    color: var(--main-color);
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    -moz-appearance: none;
+}
+.remove-Btn:hover{
+    background-color:#222 !important;
+    color:red;
+}
+/*-------------------------------------------------------*/
 .side-bar{
     padding-bottom:12%;
 }

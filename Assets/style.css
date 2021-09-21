@@ -1,0 +1,209 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+:root{
+    --main-color: rgb(214, 140, 43);
+    --light-color:white;
+}
+body, html {
+    height: 100vh;
+    display: block;
+    background-color: #222;
+}
+/* The hero image */
+.hero-image {
+  /* "linear-gradient" adds a darken background effect. This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./images/ingredients1.jpeg");
+  height: 75%;
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* Place text in the middle of the image */
+.hero-text {
+ text-align: center;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  border-radius:  5px 25px;
+  padding:15px;
+}
+header{
+    text-align: center;
+    color: white;  
+    margin: 0, 0;
+    font-size: 2em;
+    max-height:18%;
+    background-image: linear-gradient(to right,var(--main-color), rgb(175, 61, 61) , var(--main-color));
+}
+/* Style the navigation menu */
+.topnav{
+    overflow: hidden;
+    position: relative;
+    font-family: 'Fleur De Leah', cursive;
+    font-size:2em;
+    letter-spacing: 7px; 
+    padding-top: 2%;
+    color: white;
+    margin-bottom: 0;
+    padding-bottom:0;
+    background-image: linear-gradient(to right,var(--main-color), rgb(175, 61, 61) , var(--main-color));
+}
+button:hover{
+    background-color: var(--main-color) !important;
+}
+
+/*this just centers the saved recipes button on the slider, without adjusting other buttons */
+.saved-recipes-btn {
+transform: translate(-50px,0px);
+}
+/*css for the cards is below*/
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 60px;
+    color: #fff;
+}
+.card {
+    display:grid;
+    padding: 5%;
+    text-align: center;
+    background-color:#fff;
+    margin: 2%;
+    overflow: hidden;
+  }
+  .card header {
+    padding: 20px;
+    background: var(--main-color);
+    color: #fff;
+    border-style:solid;
+    border-width: 1px;
+    border-color:#fff;
+    border-radius: 10px;
+    max-height:100%;
+  }
+  .card img {
+    max-width: 100%;
+    min-width: 300px;
+    border-radius: 10px;
+  }
+
+    p{
+      color: #222;   
+      margin:0; 
+  }
+  /*the css below is for the checkmark styling*/
+  
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+        background-color: green;
+    }
+  #explore{
+      text-align:center;
+      color: var(--light-color);
+      font-family: 'Fleur De Leah', cursive;
+      font-size:5em;
+      letter-spacing: 150%;
+
+  }
+/*centers the scroll pictures and adds a width to it*/
+#scroll-container {
+    max-height:50%;
+    max-width:75%;
+    margin: 0px;
+    padding-left:20%;
+    padding-right:20%;
+}
+/*gives the hamburger some room*/
+#hamburger-icon {
+    max-width: 50px ;
+    max-height: 50px ;
+    padding: 5px;
+    transform: translate(0, -50px);
+}
+.menu-container{
+    text-align: end;
+    padding-right: 1%;
+
+}
+#form-div{
+    background-color: #222; 
+    color: var(--light-color);
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width:25%;
+    padding:1%;
+    }
+#food{
+    width: 100%;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+#form-div li::after{
+    content: "✖";
+    font-size: 1.15em;
+    color: var(--main-color);
+    padding-left:10px;
+}
+.side-bar{
+    padding-bottom:12%;
+}
+#copyright {
+    padding-top:10%;
+    padding-bottom:5%;
+    text-align: center;
+    color:rgb(185, 185, 185);
+}
+
+.hide {
+    display: none;
+}
+/* 
+.close{
+
+}
+.modal{
+
+} */
+
+@media screen and (max-width:1300px){
+    .card-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .card{
+        margin: 1%;
+    }
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./images/ingredients1.jpeg");
+        height: 50%;
+        max-width:100vw;
+    }
+    header{
+        max-height:25%;
+    }
+ }
+
+  @media screen and (max-width:800px){
+    .card-container{
+        grid-template-columns: 1fr;
+        max-width:75%;
+        padding-left:10%;
+        padding-right:10%;
+    }
+   
+}  
+@media screen and (max-height:575px){
+    #hamburger-icon {
+            transform: translate(0, -70px);
+        }
+}

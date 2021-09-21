@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./reset.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./GETUIKIT/uikit-3.7.3/css/uikit.min.css"/>
+    <script src="./GETUIKIT/uikit-3.7.3/js/uikit.min.js"></script>
+    <script src="./GETUIKIT/uikit-3.7.3/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Tu Le Creés</title>
+</head>
+<body>
+    <header id="title">
+         <h1  class="topnav webpage-title">Tu Le Creés
+         </h1>
+         <div class="menu-container">
+          <a href="#offcanvas-slide" id="hamburger-icon" class="uk-button uk-button-default" uk-toggle><img class="hamburger-icon" src="./images/hamburger-icon.png"></a>
+            <!-- below is the slider that comes from the hamburger icon above -->
+            <div id="offcanvas-slide" uk-offcanvas>
+                <div class="uk-offcanvas-bar">
+                    <ul class="uk-nav uk-nav-default" id="nav-list">
+                        <li class="uk-nav-header">Diet-Restricted Recipes</li>
+                        <li class="uk-nav-divider"></li>
+                        <li  class="side-bar"><a href="#">Vegetarian</a></li>
+                        <li  class="side-bar"><a href="#">Gluten Free</a></li>
+                        <li  class="side-bar"><a href="#">Dairy Free</a></li>
+                        <li  class="side-bar"><a href="#">Keto</a></li>
+                        <li  class="side-bar"><a href="#">Paleo</a></li>
+                        <li class="side-bar"><a href="#">Vegan</a></li>
+                        <a class="uk-button uk-button-default saved-recipes-btn " href="#modal-overflow" uk-toggle>Saved Recipes</a>
+
+                    <!-- below is the modal that comes from the slider menu, that shows saved recipes (the a-tag directly above contains the button)-->
+                    <div id="modal-overflow" uk-modal>
+                        <div class="uk-modal-dialog">
+                            <button class="uk-modal-close-default" type="button" uk-close></button>
+                            <div class="uk-modal-header">
+                                <h2 class="uk-modal-title">Saved Recipes</h2>
+                            </div>
+                            <div class="uk-modal-body" uk-overflow-auto>
+                                <!-- here is where the saved recipes will actually go, in place of this paragraph -->
+                                <p>You have no saved recipes! :( </p>
+                            </div>
+                            <div class="uk-modal-footer uk-text-right">
+                                <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+                            </div>
+
+                        </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+         </div>
+        </header>
+     <section class="hero hero-image ">
+         <button class="uk-button uk-button-secondary uk-button-large get-started-btn hero-text hide">Let's Get Started!
+         </button>
+
+         <!-- this is the form with the class hide that shows when you press the button above-->
+         <div class="form-container container ">
+             <form id="form">
+                <div id="form-div">
+                    <label>List any ingredients you have here with commas in between (Proteins, vegetables, fruits):</label>
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Ingredients" id="food">
+                    <ul id="fridge"> 
+                        <li class="ingredient">Example Ingredient 1</li>
+                        <li class="ingredient">Example Ingredient 2</li>
+                        <li class="ingredient">Example Ingredient 3</li>
+                    </ul> 
+                </div>
+            </form>
+         </div>
+        </section> 
+        
+        <!-- this div contains all of the cards -->
+        <div class="card-container">
+            <section class="card">
+                <header>Pumpkin Soup</header>
+                <img class="card-img" src="./images/Fall-Recipe-1-img.png" alt="recipe-1" />
+            </section>
+            <section class="card">
+                <header>Sweet Potato Rice</header>
+                <img class="card-img" src="./images/Fall-Recipe-2-img.png" alt="recipe-1" />
+                <p>Save this recipe!<label class="container">   
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label></p>
+                
+            </section>
+            <section class="card">
+                <header>Salsa</header>
+                <img src="./images/ingredients-2.jpeg" alt="recipe-1" />
+            </section>
+        </div>
+        <h3 id="explore" >Explore More!</h3>
+        <hr>
+        <br>
+
+        <!-- Below is the scroll container at the bottom of the page -->
+     <div id="scroll-container">
+         <div class="uk-position-relative uk-light" uk-slideshow>
+            <ul class="uk-slideshow-items">
+                
+                <li>
+                    <a class="slider-img-1" href="https://www.delish.com/cooking/recipe-ideas/a28576182/crustless-pumpkin-pie-recipe/"><img src="./images/Fall-Recipe-1-img.png" alt="Pumpkin Pie Recipe" uk-cover></a>
+                </li>
+                <li>
+                    !<a class="slider-img-2" href="https://www.taste.com.au/recipes/creamy-coconut-beef-pumpkin-curry/68unnsyi?r=entertaining/gp2i87q7"><img src="./images/Fall-Recipe-2-img.png" alt="recipe image" uk-cover></a>
+                </li>
+                <li>
+                    <a><img src="./images/ingredients-2.jpeg" alt="" uk-cover></a>
+                </li>
+            </ul>
+            <!-- these below are the dots at the bottom of the slider to navagate the images -->
+            <div class="uk-position-bottom-center uk-position-small">
+                <ul class="uk-dotnav">
+                    <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
+                    <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
+                    <li uk-slideshow-item="2"><a href="#">Item 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer id="copyright">
+        copyright group 7
+    </footer>
+    <script rel="javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 20%;
+    top: 5%;
+    bottom: 5%;
+    width: 800px;
+    height: 1200px;
+    overflow: auto;
+}
+
+.close {
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#modal-content {
+    margin: 5% auto;
+    padding: 10px;
+    border: 1px solid black;
+    width: 80%;
+}

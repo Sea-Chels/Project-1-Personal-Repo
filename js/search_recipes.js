@@ -24,6 +24,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
     if (event.key==='Enter') {
         event.preventDefault();
         console.log (food.value);
+        localStorage.setItem("ingredient", JSON.stringify(food.value));
         var ingredient = document.createElement('li');
         ingredient.innerHTML = food.value;
         ingredient.id = food.value;

@@ -159,6 +159,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                                     gotRecipes.innerHTML = '';
                                     savedRecipes.appendChild(cardImage);
                                     modalContent.innerHTML = '';
+                                    cardModal.style.display = 'none';
                                 });
                                 console.log(modalContent);
                                 
@@ -167,7 +168,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                                 modalContent.appendChild(cardImage);
                                 //savedRecipes.appendChild(cardImage);
                                 modalContent.appendChild(saveBtn);
-                                cardModal.style.display = "block";
+                                cardModal.style.display = "Block";
                                 
                             });
                         

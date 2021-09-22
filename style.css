@@ -187,13 +187,24 @@ button {
 .hide {
     display: none;
 }
-/* 
-.close{
-
+#fact-container{
+display:block;
+text-align: center;
+padding-bottom:1%;
+/* transform: translate(650px,0px) */
 }
-.modal{
-
-} */
+#random-facts{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--main-color);
+    padding:1%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+#random-facts:hover{
+    background-color:rgb(59, 59, 59)!important;
+}
 
 @media screen and (max-width:1300px){
     #card-container{

@@ -7,11 +7,14 @@ img {
     position: fixed;
     z-index: 1;
     left: 20%;
-    top: 5%;
+    top: 0%;
     bottom: 5%;
     width: 800px;
-    height: 100%;
+    height: 90%;
     overflow: auto;
+    background-color: white;
+    justify-content: center;
+    transform: translate(5%, 5%);
 }
 
 .close {
@@ -22,5 +25,6 @@ img {
 
 #modal-content {
     margin: 5% auto;
+    padding: 10px;
     width: 80%;
 }

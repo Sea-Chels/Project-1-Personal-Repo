@@ -65,6 +65,10 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                                 console.log(data.url);
                                 var cardImage = document.createElement('img');
                                 var modalContent = document.getElementById('modal-content');
+                                var savedRecipes = document.getElementsByClassName('uk-modal-body')[0];
+                                var saveBtn = document.createElement('input');
+                                saveBtn.setAttribute('type', 'button');
+                                saveBtn.value = 'Save Me!';
                                 modalContent.innerHTML = '';
                                 cardImage.classList.add('cardImage');
                                 cardImage.src = data.url;
@@ -76,10 +80,20 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                                     event.preventDefault();
                                     cardModal.style.display = 'none';
                                 });
-                                
+                                saveBtn.addEventListener('click', function(event){
+                                    event.preventDefault();
+                                    var gotRecipes = document.getElementById('gotRecipes');
+                                    gotRecipes.innerHTML = '';
+                                    savedRecipes.appendChild(cardImage);
+                                    modalContent.innerHTML = '';
+                                });
                                 console.log(modalContent);
+                                
                                 modalContent.appendChild(span);
+                                //savedRecipes.appendChild(span);
                                 modalContent.appendChild(cardImage);
+                                //savedRecipes.appendChild(cardImage);
+                                modalContent.appendChild(saveBtn);
                                 cardModal.style.display = "block";  
                             });
                     });
@@ -123,6 +137,11 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                                 console.log(data.url);
                                 var cardImage = document.createElement('img');
                                 var modalContent = document.getElementById('modal-content');
+                                var savedRecipes = document.getElementsByClassName('uk-modal-body')[0];
+                                var saveBtn = document.createElement('input');
+                                saveBtn.setAttribute('type', 'button');
+                                saveBtn.value = 'Save Me!';
+                                
                                 modalContent.innerHTML = '';
                                 cardImage.classList.add('cardImage');
                                 cardImage.src = data.url;
@@ -134,10 +153,20 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                                     event.preventDefault();
                                     cardModal.style.display = 'none';
                                 });
-                                
+                                saveBtn.addEventListener('click', function(event){
+                                    event.preventDefault();
+                                    var gotRecipes = document.getElementById('gotRecipes');
+                                    gotRecipes.innerHTML = '';
+                                    savedRecipes.appendChild(cardImage);
+                                    modalContent.innerHTML = '';
+                                });
                                 console.log(modalContent);
+                                
                                 modalContent.appendChild(span);
+                                //savedRecipes.appendChild(span);
                                 modalContent.appendChild(cardImage);
+                                //savedRecipes.appendChild(cardImage);
+                                modalContent.appendChild(saveBtn);
                                 cardModal.style.display = "block";
                                 
                             });

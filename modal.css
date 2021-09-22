@@ -10,7 +10,7 @@ img {
     top: 5%;
     bottom: 5%;
     width: 800px;
-    height: 1200px;
+    height: 100%;
     overflow: auto;
 }
 
@@ -22,6 +22,5 @@ img {
 
 #modal-content {
     margin: 5% auto;
-    padding: 10px;
     width: 80%;
 }

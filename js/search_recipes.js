@@ -47,14 +47,45 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                 document.getElementById('card-container').innerHTML = '';
                 for (i = 0; i < 9; i++){
                     var page = document.createElement('img');
-                    var pageTitle = document.createElement('div');
+                    var pageTitle = document.createElement('header');
+                    var section = document.createElement('section');
+                    section.classList.add('card');
                     page.src = data[i].image;
                     page.id = data[i].id;
                     page.classList.add('img');
                     pageTitle.classList.add('title');
                     pageTitle.innerHTML = data[i].title;
-                    recipeBook.append(page);
-                    recipeBook.append(pageTitle);
+                    page.addEventListener('click', function(event){
+                        event.preventDefault();
+                        var recipeCard =  fetch('https://api.spoonacular.com/recipes/'+event.target.id+'/card?apiKey=f5ee2e3ba0cc4a3abad3369a8d4f7db3')
+                            .then(function(response){
+                                return(response.json())
+                            })
+                            .then(function(data){
+                                console.log(data.url);
+                                var cardImage = document.createElement('img');
+                                var modalContent = document.getElementById('modal-content');
+                                modalContent.innerHTML = '';
+                                cardImage.classList.add('cardImage');
+                                cardImage.src = data.url;
+                                console.log(cardImage);
+                                var span = document.createElement('span');
+                                span.classList.add('close');
+                                span.innerHTML = '&times;';
+                                span.addEventListener('click', function (event){
+                                    event.preventDefault();
+                                    cardModal.style.display = 'none';
+                                });
+                                
+                                console.log(modalContent);
+                                modalContent.appendChild(span);
+                                modalContent.appendChild(cardImage);
+                                cardModal.style.display = "block";  
+                            });
+                    });
+                    section.append(pageTitle);
+                    section.append(page);
+                    recipeBook.append(section);
                 };
             });
         });
@@ -73,7 +104,7 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                 document.getElementById('card-container').innerHTML = '';
                 for (i = 0; i < 9; i++){
                     var page = document.createElement('img');
-                    var pageTitle = document.createElement('div');
+                    var pageTitle = document.createElement('header');
                     var section = document.createElement('section');
                     section.classList.add('card');
                     page.src = data[i].image;
@@ -112,9 +143,9 @@ document.querySelector('#food').addEventListener('keypress', function (event) {
                             });
                         
 
-                    })
-                    section.append(page);
+                    });
                     section.append(pageTitle);
+                    section.append(page);
                     recipeBook.append(section);
                 };
             });
